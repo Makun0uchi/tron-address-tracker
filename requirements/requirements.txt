@@ -12,6 +12,8 @@ anyio==4.9.0
     # via
     #   httpx
     #   starlette
+asyncpg==0.30.0
+    # via -r .\requirements.in
 base58==2.1.1
     # via tronpy
 certifi==2025.1.31
@@ -62,8 +64,15 @@ pydantic==2.10.6
     # via
     #   -r .\requirements.in
     #   fastapi
+    #   pydantic-settings
 pydantic-core==2.27.2
     # via pydantic
+pydantic-settings==2.8.1
+    # via -r .\requirements.in
+python-dotenv==1.1.0
+    # via
+    #   -r .\requirements.in
+    #   pydantic-settings
 regex==2024.11.6
     # via parsimonious
 requests==2.32.3
