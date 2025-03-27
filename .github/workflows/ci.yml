@@ -1,0 +1,27 @@
+---
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.11.4'
+          cache: pip
+
+      - name: Upgrade pip and install pip-tools
+        run: |
+          python -m pip install --upgrade pip
+          pip install pip-tools
+
+      - name: Install dependencies
+        run: pip-sync requirements/dev-requirements.txt requirements/requirements.txt
+
+      - name: Run flake8
+        run: flake8 app

@@ -13,7 +13,8 @@ class TronAddress(Base):
     trx_balance = Column(Integer, nullable=True)
 
     def __str__(self):
-        return f'<TronAddress({self.address}): {self.bandwidth}Mb/s, {self.energy}kWh, {self.trx_balance}b>'
+        return (f'<TronAddress({self.address}): {self.bandwidth}Mb/s, '
+                f'{self.energy}kWh, {self.trx_balance}b>')
 
     def __repr__(self):
         return str(self)
