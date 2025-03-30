@@ -1,6 +1,6 @@
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import BigInteger, Column, Integer, String
 
-from app.database import Base
+from .database import Base
 
 
 class TronAddress(Base):
@@ -10,7 +10,7 @@ class TronAddress(Base):
     address = Column(String, index=True)
     bandwidth = Column(Integer, nullable=True)
     energy = Column(Integer, nullable=True)
-    trx_balance = Column(Integer, nullable=True)
+    trx_balance = Column(BigInteger, nullable=True)
 
     def __str__(self):
         return (f'<TronAddress({self.address}): {self.bandwidth}Mb/s, '

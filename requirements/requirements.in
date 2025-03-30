@@ -6,3 +6,4 @@ pydantic-settings
 alembic
 python-dotenv
 asyncpg
+uvicorn

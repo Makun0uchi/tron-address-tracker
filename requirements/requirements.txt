@@ -23,8 +23,12 @@ certifi==2025.1.31
     #   requests
 charset-normalizer==3.4.1
     # via requests
+click==8.1.8
+    # via uvicorn
 coincurve==21.0.0
     # via tronpy
+colorama==0.4.6
+    # via click
 cytoolz==1.0.1
     # via eth-utils
 eth-abi==5.2.0
@@ -42,7 +46,9 @@ fastapi==0.115.12
 greenlet==3.1.1
     # via sqlalchemy
 h11==0.14.0
-    # via httpcore
+    # via
+    #   httpcore
+    #   uvicorn
 httpcore==1.0.7
     # via httpx
 httpx==0.28.1
@@ -100,3 +106,5 @@ typing-extensions==4.13.0
     #   sqlalchemy
 urllib3==2.3.0
     # via requests
+uvicorn==0.34.0
+    # via -r .\requirements.in
